@@ -1,5 +1,3 @@
-package classes;
-
 import interfaces.Discountable;
 
 public abstract class Product implements Discountable{
@@ -34,7 +32,9 @@ public abstract class Product implements Discountable{
 		if(name == null || !(name instanceof String)) {
 			throw new IllegalArgumentException("O nome do produto não pode ser nulo. O nome do produto tem que ser uma String");
 		}
-		
+	}
+	
+	public void extendendoValidarName() {
 		try {
 			validarName(name);
 			
@@ -49,7 +49,9 @@ public abstract class Product implements Discountable{
 		if(price == 0) {
 			throw new IllegalArgumentException("O preço não pode ser zero");
 		}
-		
+	}
+	
+	public void extendendoValidarPrice() {
 		try {
 			validarPrice(price);
 		} catch (IllegalArgumentException e) {
@@ -65,7 +67,7 @@ public abstract class Product implements Discountable{
 		}
 	}
 	
-	public void percentual(double percentual) throws IllegalArgumentException {
+	public void extendendoValidarPercentual(double percentual) throws IllegalArgumentException {
 		
 		try {
 			validarPercentual(percentual);
