@@ -39,7 +39,9 @@ public class Produto {
 		if(nome == null || nome instanceof String) {
 			throw new IllegalArgumentException("O nome do produto não pode ser nulo. O nome do produto deve ser uma String.");
 		}
-		
+	}
+
+	public void exetendendoValidarNome(String nome){
 		try {
 			validarNome(nome);
 		} catch (IllegalArgumentException e) {
@@ -53,7 +55,9 @@ public class Produto {
 		if (quantidade <= 0) {
 			throw new IllegalArgumentException("A quantidade não pode ser negativa. A quantidade não pode ser zero.");
 		}
-		
+	}
+
+	public void extendendoValidarQuantidade(int quantidade){
 		try {
 			validarQuantidade(quantidade);
 		} catch (IllegalArgumentException e){
@@ -67,7 +71,9 @@ public class Produto {
 		if (preco <= 0) {
 			throw new IllegalArgumentException("O preço não pode ser negativo. O preço não pode ser zero.");
 		}
-		
+	}
+
+	public void extendendoValidarPreco(double preco){
 		try {
 			validarPreco(preco);
 		} catch(IllegalArgumentException e) {
