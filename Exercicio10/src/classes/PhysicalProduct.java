@@ -17,7 +17,7 @@ public class PhysicalProduct extends Product implements Discountable {
 
 	@Override
 	public double applyDiscount(double percentual) {
-		validarPercentual(percentual);
+		extendendoValidarPercentual(percentual);
 		price = price - percentual;
 		System.out.println("O preço do produto com desconto é: " + price);
 		return 0;
